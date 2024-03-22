@@ -1,10 +1,9 @@
 import logging
 import re
-from typing import Any
+from typing import Any, Union
 
 
 _logger = logging.getLogger(__name__)
-import sys; print(sys.version); _logger.warning(sys.version)
 
 _main_title_regex = re.compile(r'^#[\s]*(.*)$')
 _confirmation_message_regex = re.compile(r'^_(.*)_$')
@@ -36,7 +35,7 @@ def end_create_form():
     return '}'
 
 
-def _concatenate_lines(lines: list[str] | tuple[str], identation_level: int = 1, identation: str = 2 * ' '):
+def _concatenate_lines(lines: Union[list[str], tuple[str]], identation_level: int = 1, identation: str = 2 * ' '):
     return '\n'.join([f'{identation * identation_level}{line}' for line in lines])
 
 
