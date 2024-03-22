@@ -22,7 +22,7 @@ def _root():
                 return render_template('index.html', **values)
 
         elif 'reset' in request.form:
-            code = Path('sample.md').read_text()
+            code = Path('samples/sample.md').read_text()
             values = {
                 'code': code,
                 'form_script': create_google_apps_script(code),
