@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from flask import Flask, render_template, request
-from google_forms import create_google_apps_script
+from .google_forms import create_google_apps_script
 
 TITLE = 'Markdown to Google Forms via Google Apps Script'
 app = Flask(__name__)
