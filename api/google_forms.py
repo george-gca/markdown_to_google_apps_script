@@ -4,6 +4,7 @@ from typing import Any
 
 
 _logger = logging.getLogger(__name__)
+import sys; print(sys.version); _logger.warning(sys.version)
 
 _main_title_regex = re.compile(r'^#[\s]*(.*)$')
 _confirmation_message_regex = re.compile(r'^_(.*)_$')
