@@ -1,18 +1,16 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# Markdown to Google Forms
 
-# Flask + Vercel
+Flask web app to convert a Markdown style document into Google Apps Script code, which in turn is used to generate a Google Forms.
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+This is not the best solution possible, but it is a solution. One can probably implement something more robust by using libraries like [marko](https://github.com/frostming/marko) or [mistletoe](https://github.com/miyuchina/mistletoe).
 
-## Demo
+## Usage
 
-https://flask-python-template.vercel.app/
+Visit the [web app](https://markdown-to-google-apps-script.vercel.app/) and paste the contents of your markdown file in the text area to the left. Click the `Create script` button and the code will be generated on the text area to the right.
 
-## How it Works
+Then, paste the generated code on a [new project](https://script.google.com/home/projects/create) in Google Apps Script and execute it. On the first run of this new project it will ask for permissions to your Google Drive, which should be conceded, so it can create the new form. A new file will be created on your [Google Drive](https://drive.google.com/) with the name you used as title. Note that the form is not ready to use, but at least the basic structure will be done.
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
-
-## Running Locally
+### Running Locally
 
 ```bash
 npm i -g vercel
@@ -20,9 +18,3 @@ vercel dev
 ```
 
 Your Flask application is now available at `http://localhost:3000`.
-
-## One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
